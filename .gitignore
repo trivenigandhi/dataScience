@@ -1,5 +1,4 @@
 ### Ignore Data Files ###
 data/
 .ipynb_checkpoints/
-env.yml
 .Rproj.user
