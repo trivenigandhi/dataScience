@@ -1,0 +1,3 @@
+# NYC DOE Analyses
+This project attempts to cluster NYC high schools into peer groups using student characteristics that are exogenous to a school culture or climate. For instance, schools with similar levels of low-income, special education students will cluster into the same peer group. After creating peer groups, the project will look at difference in outcomes such as graduation and college readiness for schools in the same group, to highlight schools that are either performing better or worse
+than their peers. As this project develops I will use linear regression techniques to select features for unsupervised clustering methods to create the peers.
