@@ -1,0 +1,2 @@
+# Housing Price Predictor
+This project uses data from the Kaggle House Prices dataset to predict the cost of a home. The "generateFeaturePlots" file creates distribution plots of the features in the training set as well as correlation heat map. These distributions offer information on the nature of the data. In the "featureSelectionModel" file I make use of algorithms to determine optimal features for a predictive model.
