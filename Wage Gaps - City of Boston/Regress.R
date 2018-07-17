@@ -19,8 +19,7 @@ earnings[gender == "M", Male :=1] # update the field to 1 where sex is "M"
 
 # Here I cut the full dataset to only the departments in the top ten and only keep
 # a few select variables. The information is still at the individual level however.
-modelData <- earnings[department %in% topDepartments,
-											.(department,Male,earnings2016,earnings2017)]
+modelData <- earnings[department %in% topDepartments,.(department,Male,earnings2016,earnings2017)]
 
 # This code builds a random effects model that allows the effect of being male to
 # vary across each department, while holding the intercept and effect of 2016 earnings constant
