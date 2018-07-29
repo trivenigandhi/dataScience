@@ -20,18 +20,18 @@ def r2FeatureSelection(data,target,featureNames):
                                 scoring="r2").mean() for x in range(len(featureNames))]
     output['individualScores'] = inScores
     
-    ## sort the scores by best to worst as distance from one
-    output['delta'] = output.individualScores.apply(lambda x: 1- x)
-    output.sort_values(by=['delta'],inplace = True)
+    ## sort the scores from highest to lowest
+    #output['delta'] = output.individualScores.apply(lambda x: 1- x)
+    output.sort_values(by=['individualScores'],inplace = True)
     output.drop("delta",axis = 1,inplace = True)
-    featureIndex = output.index
+    #featureIndex = output.index
     
     ## Create output list of features starting with best ranked from earlier,
     ## then successively add each next best feature 
     addScores = [output.iloc[0,1]]
     f = [featureIndex[0]]
     for i in range(1,len(featureNames)):
-        f.append(testIndex[i])
+        f.append(featureIndex[i])
         addScores.append(cross_val_score(estimator = lm,
                                 X = data[:,f],
                                 y = target,
